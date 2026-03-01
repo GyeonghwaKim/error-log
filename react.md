@@ -15,3 +15,25 @@
 * **주의 사항**: 변수명을 수정한 후에는 반드시 개발 서버를 **재시작(Restart)**해야 반영됨
 
 ---
+## 📋 React 개발 에러 로그
+
+에러 내용: Invalid DOM property for. Did you mean htmlFor?
+
+발생 위치: <label> 태그의 for 속성 사용 시 발생
+
+원인: JSX는 JavaScript 기반이므로 예약어인 for 대신 htmlFor를 사용해야 함
+
+해결 방법: for="id"를 htmlFor="id"로 수정
+
+---
+## 📋 React 개발 에러 로그
+
+오류 상황: 배열의 마지막 요소에 접근하기 위해 array[-1] 사용
+
+현상: 에러는 나지 않으나 undefined 반환 (JavaScript는 음수 인덱스 브라우징 미지원)
+
+해결 방법:
+
+최신 방식: array.at(-1) 사용 (가장 권장)
+
+전통적 방식: array[array.length - 1] 사용
